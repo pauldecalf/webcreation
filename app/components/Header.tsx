@@ -32,31 +32,31 @@ export const Header = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <span className="text-white font-bold text-2xl">WebCréation</span>
+            <span className={`font-bold text-2xl ${isScrolled ? 'text-black' : 'text-white'}`}>WebCréation</span>
           </div>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollTo('services')}
-              className="text-white hover:text-primary transition-colors"
+              className={`hover:text-primary transition-colors ${isScrolled ? 'text-black' : 'text-white'}`}
             >
               Services
             </button>
             <button
               onClick={() => scrollTo('pricing')}
-              className="text-white hover:text-primary transition-colors"
+              className={`hover:text-primary transition-colors ${isScrolled ? 'text-black' : 'text-white'}`}
             >
               Forfaits
             </button>
             <button
               onClick={() => scrollTo('portfolio')}
-              className="text-white hover:text-primary transition-colors"
+              className={`hover:text-primary transition-colors ${isScrolled ? 'text-black' : 'text-white'}`}
             >
               Réalisations
             </button>
             <button
               onClick={() => scrollTo('testimonials')}
-              className="text-white hover:text-primary transition-colors"
+              className={`hover:text-primary transition-colors ${isScrolled ? 'text-black' : 'text-white'}`}
             >
               Témoignages
             </button>
@@ -69,7 +69,7 @@ export const Header = () => {
           </nav>
           {/* Mobile Navigation Toggle */}
           <button
-            className="md:hidden text-gray-700"
+            className={`md:hidden ${isScrolled ? 'text-black' : 'text-white'}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
