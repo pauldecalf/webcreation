@@ -151,9 +151,14 @@ export const Footer = () => {
           </div>
         </div>
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
+          <a 
+            href="https://pauldecalf.fr/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-gray-400 text-sm hover:text-white transition-colors"
+          >
             &copy; {new Date().getFullYear()} WebCréation. Tous droits réservés.
-          </p>
+          </a>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a
               href="#"
